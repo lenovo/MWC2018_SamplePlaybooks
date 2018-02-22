@@ -1,0 +1,8 @@
+---
+- name: Check for yum updates!
+  hosts: all
+ 
+  tasks:
+ 
+  - name: yum check-update
+    shell: 'yum check-update || test $? -eq 100'
